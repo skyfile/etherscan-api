@@ -136,3 +136,19 @@ type LatestPrice struct {
 	ETHUSD          float64 `json:"ethusd,string"`
 	ETHUSDTimestamp Time    `json:"ethusd_timestamp"`
 }
+
+type Geth struct {
+	Jsonrpc string      `json:"jsonrpc"`
+	Id      int64       `json:"id"`
+	Result  interface{} `json:"result"`
+}
+
+type GasPrice struct {
+	Geth
+	Result string `json:"result"`
+}
+
+type BlockNumber struct {
+	Geth
+	Result string `json:"result"`
+}
